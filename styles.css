@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #FFF9F9, #FFEFF6);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #757575;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* Logo */
+.logo-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2.5rem;
+}
+
+.logo-container img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  margin-top: -0.5rem;
+  margin-bottom: .2rem;
+  color: #2D3748;
+
+}
+
+.header p,
+.call-to-action {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #718096;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "events youtube"
+      "events contact";
+  }
+
+  .events-card {
+    grid-area: events;
+    height: 100%;
+  }
+
+  .youtube-card {
+    grid-area: youtube;
+  }
+
+  .contact-card {
+    grid-area: contact;
+  }
+}
+
+/* Cards */
+.card {
+  background: white;
+  /* fallback */
+  background: linear-gradient(to bottom, #FFFCFD, #FFF0F5);
+  border-radius: 32px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #FDB7BC;
+}
+
+.card-label {
+  color: #F06B9B;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  margin-bottom: .3rem;
+  font-family:'DM Mono', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+  color: #2D3748;
+  font-weight: 600;
+}
+
+.card p {
+  color: #718096;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 1.2rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #F06B9B;
+  color: white;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #E54B8B;
+  transform: translateY(-1px);
+}
+
+/* Partner logos */
+.partners-header {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1rem;
+  font-family: 'DM Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #F06B9B;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  opacity: 0.9;
+  margin-top: 1.5rem;
+}
+
+.partners img {
+  max-width: min(250px, 25vw);
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
